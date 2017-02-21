@@ -2,6 +2,7 @@
     <string name="app_name">LetsGO</string>
     <string name="action_sign_in_short">Register</string>
     <string name="email">Email</string>
+    <string name="error_weak_password">Password too short, enter minimum 6 characters!</string>
     <string name="minimum_password">Password too short, enter minimum 6 characters!</string>
     <string name="auth_failed">Authentication failed, check your email and password or sign up</string>
     <string name="change_email">Change Email</string>
@@ -10,6 +11,10 @@
     <string name="remove_user">Remove user</string>
     <string name="new_pass">New Password</string>
     <string name="title_activity_profile">LetsGO</string>
+    <string name="error_user_exists">User already exist with this Email.</string>
+    <string name="facebook_app_id">177697652722692</string>
+    <string name="fb_login_protocol_scheme">fb177697652722692</string>
+    <string name="error_invalid_email">Invalid Email Entered</string>
     <string name="title_activity_login">Sign in</string>
     <string name="hint_email">Email</string>
     <string name="hint_password">Password</string>
