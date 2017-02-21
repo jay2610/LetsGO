@@ -16,6 +16,8 @@ import android.widget.Toast;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.appindexing.Action;
@@ -29,7 +31,12 @@ import com.google.firebase.auth.FirebaseUser;
 import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.Arrays;
+
+import javax.security.auth.login.LoginException;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -57,28 +64,46 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setTitle(getString(R.string.app_name));
         setSupportActionBar(toolbar);
 
+
         //fb-button-callback
 
         callbackManager = CallbackManager.Factory.create();
         loginButton = (LoginButton) findViewById(R.id.login_button);
         loginButton.setReadPermissions(Arrays.asList("email"));
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
-            @Override
-            public void onSuccess(LoginResult loginResult) {
+                    @Override
+                    public void onSuccess(LoginResult loginResult) {
+                        System.out.println("OnSuccess");
+                        String accestiken = loginResult.getAccessToken().getToken();
+                        Log.e("Access TOken", accestiken);
+                        GraphRequest request = GraphRequest.newMeRequest(loginResult.getAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
 
-            }
+                            @Override
+                            public void onCompleted(JSONObject object, GraphResponse response) {
 
-            @Override
-            public void onCancel() {
+                                Log.e("Login result", response.toString());
+                                Bundle bFacebookdate = getFacebookdata(object);
 
-            }
 
-            @Override
-            public void onError(FacebookException error) {
+                            }
+                        });
 
-            }
-        }
+
+                    }
+
+                    @Override
+                    public void onCancel() {
+
+                    }
+
+                    @Override
+                    public void onError(FacebookException error) {
+
+                    }
+                }
         );
+
+
         //get firebase auth instance
         auth = FirebaseAuth.getInstance();
 
@@ -288,6 +313,9 @@ public class MainActivity extends AppCompatActivity {
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
+
+    //Facebook bundle
+
 
     //sign out method
     public void signOut() {
