@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "897629915897",
+    "firebase_url": "https://letsgo-b5028.firebaseio.com",
+    "project_id": "letsgo-b5028",
+    "storage_bucket": "letsgo-b5028.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:897629915897:android:1358247bd7609b62",
+        "android_client_info": {
+          "package_name": "edu.project.LetsGO"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "897629915897-euc57ev819alvkkcoscphnhqpmoc7eiu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.project.LetsGO",
+            "certificate_hash": "93DA9882295DF362A8B9E2004409C094FF87CA96"
+          }
+        },
+        {
+          "client_id": "897629915897-9v1260miu0tsgainpesbnlo5n4hvs74a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5NiucCYkkMyi1blBqTcVaYaXDTK6YimY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "897629915897-9v1260miu0tsgainpesbnlo5n4hvs74a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
