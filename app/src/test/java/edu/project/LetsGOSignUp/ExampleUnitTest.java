@@ -1,4 +1,4 @@
-package edu.project.LetsGO;
+package edu.project.LetsGOSignUp;
 
 import org.junit.Test;
 

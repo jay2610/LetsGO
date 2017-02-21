@@ -1,4 +1,4 @@
-package edu.project.LetsGO;
+package edu.project.LetsGOSignUp;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

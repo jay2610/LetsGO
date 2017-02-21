@@ -1,4 +1,4 @@
-package edu.project.LetsGO;
+package edu.project.LetsGOSignUp;
 
 import android.content.Intent;
 import android.os.Bundle;

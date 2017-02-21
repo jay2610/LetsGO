@@ -1,4 +1,4 @@
-package edu.project.LetsGO;
+package edu.project.LetsGOSignUp;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
