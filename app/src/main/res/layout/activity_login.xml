@@ -7,13 +7,22 @@
     android:fitsSystemWindows="true"
     tools:context="edu.project.LetsGO.LoginActivity">
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone" />
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="@color/colorPrimary"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="@dimen/activity_horizontal_margin">
+        android:padding="@dimen/activity_horizontal_margin"
+        android:weightSum="1">
 
 
         <ImageView
@@ -21,7 +30,8 @@
             android:layout_height="@dimen/logo_w_h"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="30dp"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@mipmap/ic_launcher"
+            tools:ignore="ContentDescription" />
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -57,24 +67,46 @@
 
         <Button
             android:id="@+id/btn_login"
-            android:layout_width="344dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:background="@color/colorAccent"
             android:text="@string/btn_login"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:layout_height="30dp"
+            android:layout_width="match_parent"
+            tools:ignore="InefficientWeight" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_height="33dp"
+            android:layout_gravity="right"
+            android:baselineAligned="false"
+            tools:ignore="RtlHardcoded">
 
-        <com.google.android.gms.common.SignInButton
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnGoogle"
-            android:layout_gravity="center_vertical|center_horizontal"></com.google.android.gms.common.SignInButton>
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/btnGoogle"
+                android:text="@string/btn_Google"
+                android:textColor="@android:color/black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="1">
+            </com.google.android.gms.common.SignInButton>
+
+            <com.facebook.login.widget.LoginButton
+                xmlns:facebook="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/login_button"
+                android:layout_width="wrap_content"
+                android:elevation="0dp"
+                android:layout_marginTop="4dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
 
         <Button
             android:id="@+id/btn_reset_password"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="19dp"
             android:layout_marginTop="20dip"
             android:background="@null"
             android:text="@string/btn_forgot_password"
@@ -87,20 +119,13 @@
         <Button
             android:id="@+id/btn_signup"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="19dp"
             android:layout_marginTop="20dip"
             android:background="@null"
             android:text="@string/btn_link_to_register"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="15dp" />
+            android:textSize="15sp" />
     </LinearLayout>
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_gravity="center|bottom"
-        android:layout_marginBottom="20dp"
-        android:visibility="gone" />
 </android.support.design.widget.CoordinatorLayout>
