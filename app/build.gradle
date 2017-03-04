@@ -11,16 +11,38 @@ android {
         versionCode 1
         versionName "1.0"
     }
+    // Related to https://github.com/scribejava/scribejava/issues/480
+    // Scribe expects Java 7 or this custom Apache library
+    lintOptions {
+        lintConfig rootProject.file('gradle/lint.xml')
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+
 }
 repositories {
-    mavenCentral()
+    jcenter()
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
 }
+
+def dbflow_version = "4.0.0-beta5"
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -35,6 +57,20 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:25.2.0'
     compile 'com.facebook.android:facebook-android-sdk:[4,5)'
     testCompile 'junit:junit:4.12'
+    compile 'com.codepath.libraries:android-oauth-handler:1.1.0'
+    // Picasso for remote image loading
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    // Android Async Http for sending async network requests
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    // DBFlow for simple persistence with an ORM
+    annotationProcessor "com.github.Raizlabs.DBFlow:dbflow-processor:${dbflow_version}"
+    compile "com.github.Raizlabs.DBFlow:dbflow-core:${dbflow_version}"
+    compile "com.github.Raizlabs.DBFlow:dbflow:${dbflow_version}"
+    //yelp
+    compile 'com.yelp.clientlib:yelp-android:3.0.0'
+    ///bottom bar
+    compile 'com.roughike:bottom-bar:2.1.1'
+
 }
 
 apply plugin: 'com.google.gms.google-services'

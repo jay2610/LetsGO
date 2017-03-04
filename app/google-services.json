@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "897629915897-oqbfvi9qnma7k4ulrs8rghggtnk0ggh8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.project.LetsGO",
+            "certificate_hash": "082136a38713cf9481f3ee8c0e5a427b5b43ce68"
+          }
+        },
+        {
           "client_id": "897629915897-euc57ev819alvkkcoscphnhqpmoc7eiu.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

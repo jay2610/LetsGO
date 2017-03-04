@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">LetsGO</string>
+    <string name="login_label">Log in</string>
+    <string name="textview">TextView</string>
+    <string name="create">Create</string>
+    <string name="add_friends">Add Friends :</string>
+    <string name="time">Time :</string>
     <string name="action_sign_in_short">Register</string>
     <string name="email">Email</string>
     <string name="minimum_password">Password too short, enter minimum 6 characters!</string>
