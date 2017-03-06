@@ -46,7 +46,6 @@ public class LoginActivity extends AppCompatActivity {
     private Button btnSignup, btnLogin, btnReset;
     private SignInButton mGoogleBtn;
     private LoginButton loginButton;
-    private CallbackManager callbackManager;
     private CallbackManager mCallbackManager;
     private GoogleApiClient mGoogleApiClient;
 

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/LinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            tools:ignore="DisableBaselineAlignment">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <ImageView
+                    android:id="@+id/main_image"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="48dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.36"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/rating_image"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.75"
+                    app:srcCompat="@drawable/ic_image_black_48dp"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="181dp"
+                android:layout_height="97dp"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/name_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="TextView"
+                    android:textAppearance="@style/BB_BottomBarItem_Fixed.TitleAppearance"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText"
+                    tools:layout_editor_absoluteX="143dp" />
+
+                <TextView
+                    android:id="@+id/address_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/textview"
+                    app:layout_constraintLeft_toLeftOf="@+id/rating_image"
+                    tools:layout_editor_absoluteY="55dp" />
+
+                <ImageView
+                    android:id="@+id/rating_image"
+                    android:layout_width="132dp"
+                    android:layout_height="20dp"
+                    app:layout_constraintLeft_toLeftOf="@+id/name_text"
+                    app:srcCompat="@drawable/ic_image_black_48dp"
+                    tools:ignore="ContentDescription"
+                    tools:layout_editor_absoluteY="34dp" />
+
+                <TextView
+                    android:id="@+id/category_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    app:layout_constraintLeft_toLeftOf="@+id/address_text"
+                    tools:ignore="HardcodedText"
+                    tools:layout_editor_absoluteY="80dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="0dp"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/select_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SELECT" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

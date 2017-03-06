@@ -20,6 +20,8 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 public class SignupActivity extends AppCompatActivity {
@@ -30,7 +32,9 @@ public class SignupActivity extends AppCompatActivity {
     private ProgressBar progressBar;
     private FirebaseAuth auth;
     private FirebaseUser user;
+    private DatabaseReference mDatabase;
 
+    //final
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +42,8 @@ public class SignupActivity extends AppCompatActivity {
 
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
-
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
         btnSignIn = (Button) findViewById(R.id.sign_in_button);
         btnSignUp = (Button) findViewById(R.id.sign_up_button);
         inputEmail = (EditText) findViewById(R.id.email);
@@ -122,6 +127,8 @@ public class SignupActivity extends AppCompatActivity {
                                                     }
                                                 }
                                             });
+                                    String uid = user.getUid();
+                                    mDatabase.child("users").child(uid);
                                     startActivity(new Intent(SignupActivity.this, LoginActivity.class));
                                     finish();
                                 }
