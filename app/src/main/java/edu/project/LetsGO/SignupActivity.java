@@ -127,8 +127,8 @@ public class SignupActivity extends AppCompatActivity {
                                                     }
                                                 }
                                             });
-                                    String uid = user.getUid();
-                                    mDatabase.child("users").child(uid);
+//                                    String uid = user.getUid();
+//                                    mDatabase.child("users").child(uid);
                                     startActivity(new Intent(SignupActivity.this, LoginActivity.class));
                                     finish();
                                 }

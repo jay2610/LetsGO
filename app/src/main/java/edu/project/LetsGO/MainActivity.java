@@ -27,16 +27,13 @@ import cz.msebera.android.httpclient.Header;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
-
+    public Button settingsbutton;
     SearchView mSearchView;
     //recycler view objects
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     private List<Business> listItems;
     private LinearLayoutManager mLinearLayoutManager;
-
-    public Button settingsbutton;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,13 +49,13 @@ public class MainActivity extends AppCompatActivity {
         loadRecyclerViewData();
 
         settingsbutton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
+            @Override
+            public void onClick(View v) {
 
-                        Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-                        startActivity(intent);
-                    }
-                });
+                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 

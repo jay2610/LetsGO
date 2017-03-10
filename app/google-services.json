@@ -15,6 +15,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "897629915897-mlk2l8ucgsjkcu8hvijnesha53ae09aj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.project.LetsGO",
+            "certificate_hash": "ec6734d2eea1b1e4dab40e488b8d62f3d4892088"
+          }
+        },
+        {
+          "client_id": "897629915897-e7g8udalnmk509k6ibc2885is7jcf0lb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.project.LetsGO",
+            "certificate_hash": "da10fd5af0672c6ad4f281dbef6a4d46f1681824"
+          }
+        },
+        {
           "client_id": "897629915897-oqbfvi9qnma7k4ulrs8rghggtnk0ggh8.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -28,6 +44,50 @@
           "android_info": {
             "package_name": "edu.project.LetsGO",
             "certificate_hash": "93da9882295df362a8b9e2004409c094ff87ca96"
+          }
+        },
+        {
+          "client_id": "897629915897-9v1260miu0tsgainpesbnlo5n4hvs74a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5NiucCYkkMyi1blBqTcVaYaXDTK6YimY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "897629915897-9v1260miu0tsgainpesbnlo5n4hvs74a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:897629915897:android:877e8d3a4cde64dc",
+        "android_client_info": {
+          "package_name": "com.LetsGo.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "897629915897-epatug2i95dsl71r4fvj4vsp6hbma7u7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.LetsGo.android",
+            "certificate_hash": "da10fd5af0672c6ad4f281dbef6a4d46f1681824"
           }
         },
         {

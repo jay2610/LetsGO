@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.facebook.login.LoginManager;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -244,6 +245,7 @@ public class SettingsActivity extends AppCompatActivity {
     //sign out method
     public void signOut() {
         auth.signOut();
+        LoginManager.getInstance().logOut();
     }
 
     @Override
